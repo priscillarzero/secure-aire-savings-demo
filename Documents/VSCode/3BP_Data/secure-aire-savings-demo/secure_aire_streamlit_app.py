@@ -327,8 +327,8 @@ def main():
     st.sidebar.header("⚙️ Configuration")
     
     # API credentials (use your working credentials)
-    app_id = st.sidebar.text_input("Genability App ID", value="492cd8dc-a21b-4fac-91c1-1bf7c2595902")
-    app_key = st.sidebar.text_input("Genability App Key", value="5031d50f-11b6-4685-b784-f3c4c8395cdf", type="password")
+    app_id = st.sidebar.text_input("Genability App ID", value="f13be756-3006-47df-b4b5-854cd0e7f0a7")
+    app_key = st.sidebar.text_input("Genability App Key", value="8dc901aa-41d7-449b-a7f5-2cba19624cea", type="password")
     
     # Customer name
     customer_name = st.sidebar.text_input("Customer Name", value="Customer")
