@@ -326,12 +326,18 @@ def main():
     # Sidebar for configuration
     st.sidebar.header("⚙️ Configuration")
     
-    # API credentials (use your working credentials)
-    app_id = st.sidebar.text_input("Genability App ID", value="f13be756-3006-47df-b4b5-854cd0e7f0a7")
-    app_key = st.sidebar.text_input("Genability App Key", value="8dc901aa-41d7-449b-a7f5-2cba19624cea", type="password")
+    # API credentials - user must enter their own
+    app_id = st.sidebar.text_input("Genability App ID", value="", help="Enter your Genability App ID")
+    app_key = st.sidebar.text_input("Genability App Key", value="", type="password", help="Enter your Genability App Key")
     
     # Customer name
     customer_name = st.sidebar.text_input("Customer Name", value="Customer")
+    
+    # Validate credentials are entered
+    if not app_id or not app_key:
+        st.warning("⚠️ Please enter your Genability API credentials in the sidebar to use this app.")
+        st.info("💡 You can get API credentials from your Genability account at https://genability.com")
+        return  # Exit early if no credentials
     
     # MOVED PEAK REDUCTION SLIDER TO TOP
     st.markdown("---")
